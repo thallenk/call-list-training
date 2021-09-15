@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './app/App';
+
+
+import { ConfigProvider } from 'antd';
+import ptBR from 'antd/lib/locale/pt_BR'
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import Routes from 'routes';
 
 
 ReactDOM.render(
   <React.StrictMode>
-      <App />
+    <ConfigProvider locale={ptBR}>
+      <Routes />
+      </ConfigProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
