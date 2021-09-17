@@ -3,9 +3,8 @@ import React, { useState } from 'react';
 import { Form,  Button } from 'antd';
 import * as S from './login.styles'
 
-import { RootState } from '../../store/store'
-import { useSelector, useDispatch } from 'react-redux'
-import { getUser } from '../../store/User/index';
+import { useDispatch, useSelector } from 'react-redux'
+import { getUser, selectUser } from '../../store/User/index';
 
 
 function Login() {
@@ -14,15 +13,16 @@ function Login() {
   const [ password, setPassword ] = useState('');
 
 
-  const user = useSelector((state: RootState) => state.user)
-  const dispatch = useDispatch()
 
+  const dispatch = useDispatch()
+  const { user } = useSelector(selectUser)
   function handleState () {
     dispatch(getUser(name))
-
+    window.location.href='/dashboard'
     console.log(user)
-   // window.location.href='/dashboard'
   }
+
+
   return (
     <S.Wrapper>
     <h1>Acesso ao Portal</h1>

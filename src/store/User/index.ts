@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { RootState } from '../../store/store'
+
 
 export interface GetState {
     user: string,
@@ -19,12 +21,12 @@ export const slice = createSlice({
             return { ...state, isLogged: true, user: payload}
         },
         logout(state){
-            return {...state, isLogged: false, user: ''}
+            return { ...state, isLogged: false, user: ''}
         }
     }
 })
 
 export const { getUser, logout } = slice.actions
 
-
+export const selectUser = (state: RootState)=> state.user
 export default slice.reducer

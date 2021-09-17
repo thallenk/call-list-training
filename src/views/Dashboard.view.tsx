@@ -1,9 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { RootState } from 'store/store';
+import {  selectUser } from '../store/User/index';
 
 function DashboardView () {
-    const user = useSelector((state: RootState) => state.user.user)
+    const { user } = useSelector(selectUser)
     return(
         <div>
             Olá, {user}
