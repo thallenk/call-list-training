@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { Form,  Button } from 'antd';
 import * as S from './login.styles'
 
-import { useDispatch, useSelector } from 'react-redux'
-import { getUser, selectUser } from '../../store/User/index';
+
+import { getUser } from '../../store/User/index';
+import { useAppDispatch } from 'store/store';
+
 
 
 function Login() {
@@ -14,12 +16,12 @@ function Login() {
 
 
 
-  const dispatch = useDispatch()
-  const { user } = useSelector(selectUser)
+  const dispatch = useAppDispatch()
+
   function handleState () {
     dispatch(getUser(name))
+
     window.location.href='/dashboard'
-    console.log(user)
   }
 
 

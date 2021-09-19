@@ -29,4 +29,7 @@ export const slice = createSlice({
 export const { getUser, logout } = slice.actions
 
 export const selectUser = (state: RootState)=> state.user
+
+
 export default slice.reducer
+
