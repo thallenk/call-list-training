@@ -10,10 +10,14 @@ function DashboardView () {
 
 
     const {Call} = useSelector(selectProject)
+    console.log(Call)
     return(
         <div>
             Olá, {name}
-            {Call}
+            <ul>
+            {Call.map((call) => <li>{call.descricao}</li>)}
+            </ul>
+
         </div>
     )
 }

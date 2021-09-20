@@ -6,6 +6,8 @@ import * as S from './login.styles'
 
 import { getUser } from '../../store/User/index';
 import { useAppDispatch } from 'store/store';
+import { useHistory } from 'react-router';
+import { getProject } from 'store/Project';
 
 
 
@@ -15,13 +17,13 @@ function Login() {
   const [ password, setPassword ] = useState('');
 
 
-
+  const history = useHistory()
   const dispatch = useAppDispatch()
 
   function handleState () {
     dispatch(getUser(name))
-
-    window.location.href='/dashboard'
+    dispatch(getProject())
+    history.push('/dashboard')
   }
 
 
