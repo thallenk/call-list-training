@@ -3,12 +3,12 @@ import { RootState } from '../../store/store'
 
 
 export interface GetState {
-    user: string,
+    name: string,
     isLogged: boolean
   }
 
   const initialState: GetState = {
-    user: '',
+    name: '',
     isLogged: false,
   }
 
@@ -18,10 +18,10 @@ export const slice = createSlice({
 
     reducers: {
         getUser (state, {payload}) {
-            return { ...state, isLogged: true, user: payload}
+            return { ...state, isLogged: true, name: payload}
         },
         logout(state){
-            return { ...state, isLogged: false, user: ''}
+            return { ...state, isLogged: false, name: ''}
         }
     }
 })

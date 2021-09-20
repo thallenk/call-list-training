@@ -6,13 +6,13 @@ import { selectProject } from 'store/Project';
 
 function DashboardView () {
 
-    const { user } = useSelector(selectUser)
+    const { name } = useSelector(selectUser)
 
 
     const {Call} = useSelector(selectProject)
     return(
         <div>
-            Olá, {user}
+            Olá, {name}
             {Call}
         </div>
     )

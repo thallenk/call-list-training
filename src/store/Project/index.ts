@@ -40,7 +40,7 @@ interface getState {
 
     reducers: {
         getProject (state) {
-            return { ...state}
+            return {...state}
 
         }
     }
