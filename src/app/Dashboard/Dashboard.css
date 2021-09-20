@@ -1,0 +1,56 @@
+@import "antd/dist/antd.css";
+
+.ant-layout-header{ 
+    background-color: white;
+    width: 100vw;
+    margin-left: -18%;
+    border-bottom: 4px solid #c4c4c4;
+    
+   }
+
+.client{
+    text-align: right;
+    margin-top: -7%;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.ant-layout-sider-dark{
+    background-color: white;
+    margin-top: 4.6%;
+
+}
+
+
+.ant-menu {
+   
+    background-color: white;
+    border: 2px solid #c4c4c4;
+    height: 100%;
+    
+
+}
+
+.ant-btn {
+    border: none;
+    box-shadow: none;
+    text-decoration-line: underline;
+}
+
+.ant-layout-content{
+    margin: 20px;
+
+
+}
+.ant-layout{
+    background-color: white;
+    height: 100vh;
+}
+
+.ant-layout-footer{
+    background-color: white;
+    text-align: right;
+}
+

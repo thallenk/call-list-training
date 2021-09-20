@@ -9,7 +9,8 @@ import { useDispatch } from 'react-redux'
 
 const persistConfig = {
   key: 'root',
-  storage:storage
+  storage:storage,
+  version: 1
 };
 
 const store = configureStore({

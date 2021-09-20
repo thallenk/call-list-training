@@ -1,0 +1,13 @@
+@import "antd/dist/antd.css";
+
+.ant-spin-container{
+    margin: 10px;
+    position: absolute;
+}
+
+.ant-table-wrapper{
+    border: none;
+}
+.ant-table-thead > tr > th{
+    border-right: 1px solid #969696;
+}

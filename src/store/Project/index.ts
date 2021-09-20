@@ -8,6 +8,8 @@ import projectMock from '../../mocks/call.json'
 
 interface call {
     id: string;
+    idProject:string;
+    idStatus: string;
     descricao: string;
 }
 
