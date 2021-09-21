@@ -33,7 +33,7 @@
 
 }
 
-.ant-btn {
+#call-btn {
     border: none;
     box-shadow: none;
     text-decoration-line: underline;
@@ -52,5 +52,11 @@
 .ant-layout-footer{
     background-color: white;
     text-align: right;
+}
+
+#create-btn{
+    background-color: #c4c4c4;
+    float: right;
+    margin-bottom: 20px;
 }
 

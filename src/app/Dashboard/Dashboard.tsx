@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button, Layout, Menu } from 'antd';
-import './Dashboard.css'
+import { useHistory } from 'react-router';
 
+import './Dashboard.css'
 import { useSelector} from 'react-redux';
 import {  selectUser } from '../../store/User/index'
 import { selectProject } from 'store/Project';
@@ -12,6 +13,11 @@ const { Header, Footer, Sider, Content } = Layout;
 
 export default function Dashboard() {
     
+    const history = useHistory()
+    function handleCreateCallPage() {
+        history.push('/create-call')
+    }
+
     const { name } = useSelector(selectUser)
 
     const {Call} = useSelector(selectProject)
@@ -19,7 +25,7 @@ export default function Dashboard() {
         <Layout className='layout'>
             <Sider>
                 <Menu>
-                    <Button>
+                    <Button id='call-btn'>
                         Chamados
                     </Button>
                 </Menu>
@@ -33,9 +39,9 @@ export default function Dashboard() {
 
             </Header>
             <Content>
-                {/* <ul>
-                    {Call.map((call) => <li>{call.descricao}</li>)}
-                </ul> */}
+                <Button id='create-btn' onClick={handleCreateCallPage}>
+                    Criar Chamado
+                </Button>
                 <Calls/>
             </Content>
             <Footer>Desenvolvido por T4i</Footer>
