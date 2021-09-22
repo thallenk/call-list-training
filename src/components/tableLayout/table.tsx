@@ -12,6 +12,8 @@ export default function Calls() {
   const {Call,CallStatus,Project} = useSelector(selectProject)
   console.log(Call)
   console.log(Call.map(call => Project.filter(proj => proj.id === call.idProject)))
+
+
   interface row {
     numero: string,
     descricao: string,
@@ -23,8 +25,8 @@ export default function Calls() {
     const finalData = {
       numero: call.id,
       descricao: call.descricao,
-      // project: Project.map((proj) => proj.id === call.idProject ? proj.descricao: ''),
-      // statusCall: CallStatus.map((Call) => Call.id === call.idStatus ? Call.descricao: '')
+      // project: Project.filter((proj) => proj.id === call.idProject),
+      // statusCall: CallStatus.filter((Call) => Call.id === call.idStatus).filter((obj) => obj.descricao)
     };
     return finalData;
   });
@@ -49,7 +51,7 @@ export default function Calls() {
     },
     {
       title: 'Status',
-      dataIndex: 'Status',
+      dataIndex: 'statusCall',
       key: 'Status',
     },
     {
@@ -61,11 +63,6 @@ export default function Calls() {
 
     return(
       <>
-      <ul>
-        <li>
-          {Call.map(call => call.idProject)}
-        </li>
-      </ul>
       <Table 
       pagination={false}
       dataSource={dataSource}
