@@ -20,7 +20,6 @@ export default function Dashboard() {
 
     const { name } = useSelector(selectUser)
 
-    const {Call} = useSelector(selectProject)
     return(
         <Layout className='layout'>
             <Sider>

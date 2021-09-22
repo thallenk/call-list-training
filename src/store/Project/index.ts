@@ -3,8 +3,8 @@ import { RootState } from 'store/store'
 
 
 import callMock from '../../mocks/call.json'
-import callStatusMock from '../../mocks/call.json'
-import projectMock from '../../mocks/call.json'
+import callStatusMock from '../../mocks/callStatus.json'
+import projectMock from '../../mocks/project.json'
 
 interface call {
     id: string;
@@ -15,12 +15,12 @@ interface call {
 
 interface callStatus {
     id: string;
-    descricao: string;
+    denominacao: string;
 }
 
 interface project {
     id: string;
-    descricao: string;
+    denominacao: string;
 }
 
 

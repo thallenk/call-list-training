@@ -9,9 +9,9 @@ export default function Calls() {
   // const dispatch = useAppDispatch()
 
   // dispatch(getProject)
-  const {Call,CallStatus,Project} = useSelector(selectProject)
-  console.log(Call)
-  console.log(Call.map(call => Project.filter(proj => proj.id === call.idProject)))
+  const {Call, Project} = useSelector(selectProject)
+
+  console.log(Call.map(call => Project.filter(proj => proj.id === call.idProject)[0]))
 
 
   interface row {
