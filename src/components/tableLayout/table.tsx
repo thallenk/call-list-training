@@ -9,7 +9,7 @@ export default function Calls() {
   // const dispatch = useAppDispatch()
 
   // dispatch(getProject)
-  const {Call, Project} = useSelector(selectProject)
+  const {Call, Project, CallStatus} = useSelector(selectProject)
 
   console.log(Call.map(call => Project.filter(proj => proj.id === call.idProject)[0]))
 
@@ -17,20 +17,22 @@ export default function Calls() {
   interface row {
     numero: string,
     descricao: string,
-    // project: string,
-    // statusCall: string,
+    project: string,
+    statusCall: string,
 
   }
   const dataSource: row[] = Call.map(function(call) {
     const finalData = {
       numero: call.id,
       descricao: call.descricao,
-      // project: Project.filter((proj) => proj.id === call.idProject),
-      // statusCall: CallStatus.filter((Call) => Call.id === call.idStatus).filter((obj) => obj.descricao)
+      project: Project.filter((proj) => proj.id === call.idProject).filter((proj) => proj.id === call.idProject)[0].denominacao,
+      statusCall: CallStatus.filter((Call) => Call.id === call.idStatus).filter((proj) => proj.id === call.idStatus)[0].denominacao
+      
     };
+    console.log(finalData.project)
     return finalData;
   });
-
+  
 
 
   const columns = [
@@ -46,7 +48,7 @@ export default function Calls() {
     },
     {
       title: 'Projeto',
-      dataIndex: 'Projeto',
+      dataIndex: 'project',
       key: 'Projeto',
     },
     {

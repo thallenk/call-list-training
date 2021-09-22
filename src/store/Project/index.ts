@@ -25,9 +25,9 @@ interface project {
 
 
 interface getState {
-    Call: Array<call>;
-    CallStatus: Array<callStatus>;
-    Project: Array<project>;
+    Call: call[];
+    CallStatus: callStatus[];
+    Project: project[];
 }
 
   const initialState: getState = {
