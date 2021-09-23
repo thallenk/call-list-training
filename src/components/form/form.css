@@ -1,0 +1,19 @@
+@import "antd/dist/antd.css";
+
+#inputProject{
+
+    background-color: #c4c4c4;
+}
+
+#inputStatus{
+
+    background-color: #c4c4c4;
+}
+
+#inputDescricao{
+
+    background-color: #c4c4c4;
+    height: 100px;
+    margin-top: -40%;
+    margin-right: 100px;
+}

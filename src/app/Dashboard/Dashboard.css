@@ -20,6 +20,7 @@
 .ant-layout-sider-dark{
     background-color: white;
     margin-top: 4.6%;
+    height: 100%;
 
 }
 
@@ -27,8 +28,8 @@
 .ant-menu {
    
     background-color: white;
-    border: 2px solid #c4c4c4;
-    height: 100%;
+    
+    
     
 
 }
@@ -59,4 +60,18 @@
     float: right;
     margin-bottom: 20px;
 }
+.ant-layout-sider{
+    height: 100%;
+}
 
+#sider{
+    border: 2px solid #c4c4c4;
+    height: 1000px;
+    border-bottom: none;
+}
+
+#siderForm{
+    border: 2px solid #c4c4c4;
+    height: 570px;
+    border-bottom: none;
+}

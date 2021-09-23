@@ -5,7 +5,6 @@ import { useHistory } from 'react-router';
 import './Dashboard.css'
 import { useSelector} from 'react-redux';
 import {  selectUser } from '../../store/User/index'
-import { selectProject } from 'store/Project';
 import Calls from 'components/tableLayout/table';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -22,7 +21,7 @@ export default function Dashboard() {
 
     return(
         <Layout className='layout'>
-            <Sider>
+            <Sider id='sider'>
                 <Menu>
                     <Button id='call-btn'>
                         Chamados

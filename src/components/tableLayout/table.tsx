@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Table } from 'antd';
-import { getProject, selectProject } from 'store/Project'
+import {  selectProject } from 'store/Project'
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'store/store';
+
+import './table.css'
 
 export default function Calls() {
 
