@@ -17,3 +17,23 @@
     margin-top: -40%;
     margin-right: 100px;
 }
+
+#labelStatus{
+    margin-left: 200px;
+}
+
+#selector{
+   margin-top:100px;
+}
+
+
+.ant-select-show-arrow{
+    background-color: #c4c4c4;
+}
+
+#status{
+    width: 120px;
+    background-color: #c4c4c4;
+    align-items: center;
+    text-align: center;
+}
