@@ -21,4 +21,21 @@ There area 3 views:
 
 2. Dashboard Page
 
+It's used the redux to show the user name and list all the calls and the antd to help on all styles and components.
+
+![dashboard](./src/assets/dashboard.png)
+
 3. Forms Page
+
+To fill the project selector, It is used the redux as well.
+
+It's added to the call list using redux the new call that comes from the forms and after that, it's showed on the dashboardpage.
+You can also click on "sair" to logout the app.
+
+![forms](./src/assets/forms.png)
+
+![fillforms](./src/assets/fillforms.png)
+
+When you click on "criar chamado" ant the end of the forms, the call is listed on dashboard page.
+
+![newcall](./src/assets/newcall.png)
