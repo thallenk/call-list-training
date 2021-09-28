@@ -1,3 +1,4 @@
+import { STATEMENT_OR_BLOCK_KEYS } from '@babel/types'
 import { createSlice } from '@reduxjs/toolkit'
 import { RootState } from 'store/store'
 
@@ -41,9 +42,14 @@ interface getState {
     initialState,
 
     reducers: {
-        getProject (state) {
-            return {...state}
-
+        getProject: (state, action) => {
+            const call = {
+                id: Math.floor(Date.now() * Math.random()).toString(36),
+                idProject: action.payload.idProject,
+                idStatus: '63a347e9-c42a-451e-bd1c-b0dd30c26894',
+                descricao:action.payload.descricao
+            };
+            state.Call.push(call)
         }
     }
 })

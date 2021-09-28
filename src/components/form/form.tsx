@@ -3,10 +3,16 @@ import { Form, Input, Button, Select } from 'antd';
 import { useHistory } from 'react-router';
 import {  selectProject } from 'store/Project'
 import { useSelector } from 'react-redux';
+import { getProject } from 'store/Project';
+
+import { useAppDispatch } from 'store/store';
+
 import './form.css'
 
 
 export default function Forms() {
+
+  const [value, setValue] = useState('')
 
 
   const { Project } = useSelector(selectProject)
@@ -19,9 +25,17 @@ export default function Forms() {
 
   const history = useHistory()
 
+  const dispatch = useAppDispatch()
 
-  function handleDashaboardPage() {
+
+  function handleState() {
+    dispatch(getProject({idProject: value, descricao:descricao}))
     history.push('/dashboard')
+}
+
+function handleDashaboardPage() {
+  dispatch(getProject({idProject: value, descricao:descricao}))
+  history.push('/dashboard')
 }
     
   // const [project, setProject] = useState('')
@@ -39,6 +53,7 @@ export default function Forms() {
         rules={[{ required: true, message: 'Please choose your project' }]}
         >
         <Select
+        onSelect={(value, e) => setValue(e.value)}
         id="selector" 
         defaultValue="projeto" 
         style={{ width: 360 }} 
@@ -85,7 +100,7 @@ export default function Forms() {
           Voltar
         </Button>
         <Button 
-        // onClick={handleState}
+         onClick={handleState}
         >
           Criar Chamado
         </Button>

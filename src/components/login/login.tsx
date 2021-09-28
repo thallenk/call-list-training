@@ -7,7 +7,7 @@ import * as S from './login.styles'
 
 import { getUser } from '../../store/User/index';
 import { useAppDispatch } from 'store/store';
-import { getProject } from 'store/Project';
+// import { getProject } from 'store/Project';
 
 
 
@@ -22,7 +22,6 @@ function Login() {
 
   function handleState () {
     dispatch(getUser(name))
-    dispatch(getProject())
     history.push('/dashboard')
   }
 

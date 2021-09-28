@@ -8,6 +8,3 @@
 .ant-table-wrapper{
     border: none;
 }
-.ant-table-thead > tr > th{
-    border-right: 1px solid #969696;
-}

@@ -75,3 +75,11 @@
     height: 570px;
     border-bottom: none;
 }
+
+#logout{
+    height: 25px;
+    border:none;
+    margin-top: 40px;
+    float: left;
+    margin-left: -40px;
+}

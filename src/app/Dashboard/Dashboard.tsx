@@ -4,7 +4,8 @@ import { useHistory } from 'react-router';
 
 import './Dashboard.css'
 import { useSelector} from 'react-redux';
-import {  selectUser } from '../../store/User/index'
+import {  logout, selectUser } from '../../store/User/index'
+import { useAppDispatch } from 'store/store';
 import Calls from 'components/tableLayout/table';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -12,11 +13,19 @@ const { Header, Footer, Sider, Content } = Layout;
 
 export default function Dashboard() {
     
+    const dispatch = useAppDispatch()
+
     const history = useHistory()
     function handleCreateCallPage() {
         history.push('/create-call')
     }
 
+    function handleLogout() {
+        dispatch(logout)
+        history.push('/')
+
+        
+    }
     const { name } = useSelector(selectUser)
 
     return(
@@ -34,6 +43,9 @@ export default function Dashboard() {
                 <div className='client'>
                     Olá, <text style={{ textTransform: 'uppercase'}}>{name}!</text>
                 </div>
+                <Button 
+                id='logout'
+                onClick={handleLogout}>Sair</Button>
 
             </Header>
             <Content>
